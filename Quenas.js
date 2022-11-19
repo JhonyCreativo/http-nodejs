@@ -46,13 +46,7 @@
  // Socket.IO
  // -------------------------------------------------------------
  const server = http.createServer(app)
- const io = require('socket.io')(server,{
-    
-        cors: {
-          origin: "*",
-          methods: ["GET", "POST"]
-        }
-    })
+ const io = require('socket.io')(server)
  
  io.on('connection', (socket) => {
      console.log("new Conection :"+socket.id)
